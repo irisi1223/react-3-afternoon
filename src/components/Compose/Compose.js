@@ -1,3 +1,5 @@
+
+
 import React, { Component } from 'react';
 import ProfileIcon from 'react-icons/lib/md/person-outline';
 
@@ -21,7 +23,11 @@ export default class Compose extends Component {
   }
 
   createPost() {
+    const {text}= this.setState;
+    const {createPost}= this.props;
 
+    createPostFn(text);
+    this.setState({text: '' })
   }
 
   render() {
